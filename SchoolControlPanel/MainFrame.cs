@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace SchoolControlPanel
 {
-    public partial class Form1 : Form
+    public partial class MainFrame : Form
     {
 
 
-        public Form1()
+        public MainFrame()
         {
             InitializeComponent();
         }

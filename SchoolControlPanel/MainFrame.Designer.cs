@@ -1,6 +1,6 @@
 ﻿namespace SchoolControlPanel
 {
-    partial class Form1
+    partial class MainFrame
     {
         /// <summary>
         /// Required designer variable.
@@ -41,14 +41,14 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // Form1
+            // MainFrame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.button1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "MainFrame";
+            this.Text = "School Control Panel";
             this.ResumeLayout(false);
 
         }
