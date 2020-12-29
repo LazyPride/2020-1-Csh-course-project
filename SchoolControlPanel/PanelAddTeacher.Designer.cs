@@ -43,7 +43,7 @@
             // 
             // text_box_teacher_first_name
             // 
-            this.text_box_teacher_first_name.Location = new System.Drawing.Point(108, 60);
+            this.text_box_teacher_first_name.Location = new System.Drawing.Point(206, 29);
             this.text_box_teacher_first_name.Margin = new System.Windows.Forms.Padding(5);
             this.text_box_teacher_first_name.Name = "text_box_teacher_first_name";
             this.text_box_teacher_first_name.Size = new System.Drawing.Size(282, 31);
@@ -54,7 +54,7 @@
             // 
             this.label_teacher_first_name.AutoSize = true;
             this.label_teacher_first_name.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label_teacher_first_name.Location = new System.Drawing.Point(103, 29);
+            this.label_teacher_first_name.Location = new System.Drawing.Point(17, 34);
             this.label_teacher_first_name.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label_teacher_first_name.Name = "label_teacher_first_name";
             this.label_teacher_first_name.Size = new System.Drawing.Size(174, 26);
@@ -65,7 +65,7 @@
             // 
             this.label_teacher_last_name.AutoSize = true;
             this.label_teacher_last_name.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label_teacher_last_name.Location = new System.Drawing.Point(103, 96);
+            this.label_teacher_last_name.Location = new System.Drawing.Point(17, 75);
             this.label_teacher_last_name.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label_teacher_last_name.Name = "label_teacher_last_name";
             this.label_teacher_last_name.Size = new System.Drawing.Size(171, 26);
@@ -74,7 +74,7 @@
             // 
             // text_box_teacher_last_name
             // 
-            this.text_box_teacher_last_name.Location = new System.Drawing.Point(108, 127);
+            this.text_box_teacher_last_name.Location = new System.Drawing.Point(206, 70);
             this.text_box_teacher_last_name.Margin = new System.Windows.Forms.Padding(5);
             this.text_box_teacher_last_name.Name = "text_box_teacher_last_name";
             this.text_box_teacher_last_name.Size = new System.Drawing.Size(282, 31);
@@ -85,7 +85,7 @@
             // 
             this.label_teacher_third_name.AutoSize = true;
             this.label_teacher_third_name.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label_teacher_third_name.Location = new System.Drawing.Point(103, 163);
+            this.label_teacher_third_name.Location = new System.Drawing.Point(14, 116);
             this.label_teacher_third_name.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label_teacher_third_name.Name = "label_teacher_third_name";
             this.label_teacher_third_name.Size = new System.Drawing.Size(182, 26);
@@ -94,7 +94,7 @@
             // 
             // text_box_teacher_third_name
             // 
-            this.text_box_teacher_third_name.Location = new System.Drawing.Point(108, 194);
+            this.text_box_teacher_third_name.Location = new System.Drawing.Point(206, 111);
             this.text_box_teacher_third_name.Margin = new System.Windows.Forms.Padding(5);
             this.text_box_teacher_third_name.Name = "text_box_teacher_third_name";
             this.text_box_teacher_third_name.Size = new System.Drawing.Size(282, 31);
@@ -103,7 +103,7 @@
             // button_confirm
             // 
             this.button_confirm.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.button_confirm.Location = new System.Drawing.Point(125, 259);
+            this.button_confirm.Location = new System.Drawing.Point(116, 157);
             this.button_confirm.Name = "button_confirm";
             this.button_confirm.Size = new System.Drawing.Size(100, 40);
             this.button_confirm.TabIndex = 6;
@@ -114,7 +114,7 @@
             // button_cancel
             // 
             this.button_cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button_cancel.Location = new System.Drawing.Point(243, 259);
+            this.button_cancel.Location = new System.Drawing.Point(232, 157);
             this.button_cancel.Name = "button_cancel";
             this.button_cancel.Size = new System.Drawing.Size(100, 40);
             this.button_cancel.TabIndex = 7;
@@ -132,7 +132,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.button_cancel;
-            this.ClientSize = new System.Drawing.Size(484, 311);
+            this.ClientSize = new System.Drawing.Size(509, 215);
             this.Controls.Add(this.button_cancel);
             this.Controls.Add(this.button_confirm);
             this.Controls.Add(this.text_box_teacher_third_name);
