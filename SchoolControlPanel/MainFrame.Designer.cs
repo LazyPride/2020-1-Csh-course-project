@@ -147,6 +147,7 @@
             this.button_add_learning_program.TabIndex = 3;
             this.button_add_learning_program.Text = "Add learning program";
             this.button_add_learning_program.UseVisualStyleBackColor = true;
+            this.button_add_learning_program.Click += new System.EventHandler(this.button_add_learning_program_Click);
             // 
             // label1
             // 

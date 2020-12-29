@@ -44,5 +44,11 @@ namespace SchoolControlPanel
             PanelAddSubject panelAddSubject = new PanelAddSubject();
             panelAddSubject.Show(this);
         }
+
+        private void button_add_learning_program_Click(object sender, EventArgs e)
+        {
+            PanelAddLearningProgram panelAddLearningProgram = new PanelAddLearningProgram();
+            panelAddLearningProgram.Show(this);
+        }
     }
 }
