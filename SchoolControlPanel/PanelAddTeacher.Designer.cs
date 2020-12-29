@@ -41,7 +41,7 @@
             // text_box_teacher_first_name
             // 
             this.text_box_teacher_first_name.Location = new System.Drawing.Point(108, 60);
-            this.text_box_teacher_first_name.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.text_box_teacher_first_name.Margin = new System.Windows.Forms.Padding(5);
             this.text_box_teacher_first_name.Name = "text_box_teacher_first_name";
             this.text_box_teacher_first_name.Size = new System.Drawing.Size(282, 31);
             this.text_box_teacher_first_name.TabIndex = 0;
@@ -104,6 +104,7 @@
             this.button_confirm.TabIndex = 6;
             this.button_confirm.Text = "Add";
             this.button_confirm.UseVisualStyleBackColor = true;
+            this.button_confirm.Click += new System.EventHandler(this.button_confirm_Click);
             // 
             // button_cancel
             // 
@@ -114,6 +115,7 @@
             this.button_cancel.TabIndex = 7;
             this.button_cancel.Text = "Close";
             this.button_cancel.UseVisualStyleBackColor = true;
+            this.button_cancel.Click += new System.EventHandler(this.button_cancel_Click);
             // 
             // PanelAddTeacher
             // 
@@ -131,7 +133,7 @@
             this.Controls.Add(this.label_teacher_first_name);
             this.Controls.Add(this.text_box_teacher_first_name);
             this.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "PanelAddTeacher";
             this.Text = "Add Teacher";
             this.ResumeLayout(false);
