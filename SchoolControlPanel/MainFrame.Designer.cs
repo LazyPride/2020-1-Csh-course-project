@@ -102,6 +102,7 @@
             this.button_add_subject.TabIndex = 7;
             this.button_add_subject.Text = "Add subject";
             this.button_add_subject.UseVisualStyleBackColor = true;
+            this.button_add_subject.Click += new System.EventHandler(this.button_add_subject_Click);
             // 
             // button_add_student_group
             // 

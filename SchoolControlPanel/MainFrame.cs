@@ -38,5 +38,11 @@ namespace SchoolControlPanel
             PanelAddClassroom panelAddClassroom = new PanelAddClassroom();
             panelAddClassroom.Show(this);
         }
+
+        private void button_add_subject_Click(object sender, EventArgs e)
+        {
+            PanelAddSubject panelAddSubject = new PanelAddSubject();
+            panelAddSubject.Show(this);
+        }
     }
 }

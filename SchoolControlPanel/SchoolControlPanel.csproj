@@ -115,6 +115,12 @@
     <Compile Include="PanelAddClassroom.Designer.cs">
       <DependentUpon>PanelAddClassroom.cs</DependentUpon>
     </Compile>
+    <Compile Include="PanelAddSubject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PanelAddSubject.Designer.cs">
+      <DependentUpon>PanelAddSubject.cs</DependentUpon>
+    </Compile>
     <Compile Include="PanelAddTeacher.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,6 +146,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PanelAddClassroom.resx">
       <DependentUpon>PanelAddClassroom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PanelAddSubject.resx">
+      <DependentUpon>PanelAddSubject.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PanelAddTeacher.resx">
       <DependentUpon>PanelAddTeacher.cs</DependentUpon>
