@@ -23,8 +23,7 @@ namespace SchoolControlPanel
         {
             using (schoolEntities contextDB = new schoolEntities())
             {
-                var popup_connection_established = new PopupConnectionEstablished();
-                popup_connection_established.ShowDialog(this);
+                MessageBox.Show("Connection established!", "Success!");
             }
         }
 

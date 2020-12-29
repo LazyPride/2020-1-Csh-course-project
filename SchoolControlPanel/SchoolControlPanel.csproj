@@ -115,12 +115,6 @@
     <Compile Include="PanelAddTeacher.Designer.cs">
       <DependentUpon>PanelAddTeacher.cs</DependentUpon>
     </Compile>
-    <Compile Include="PopupConnectionEstablished.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PopupConnectionEstablished.Designer.cs">
-      <DependentUpon>PopupConnectionEstablished.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="student.cs">
@@ -140,9 +134,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PanelAddTeacher.resx">
       <DependentUpon>PanelAddTeacher.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PopupConnectionEstablished.resx">
-      <DependentUpon>PopupConnectionEstablished.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
