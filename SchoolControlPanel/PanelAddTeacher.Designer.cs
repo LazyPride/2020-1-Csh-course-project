@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.text_box_teacher_first_name = new System.Windows.Forms.TextBox();
             this.label_teacher_first_name = new System.Windows.Forms.Label();
             this.label_teacher_last_name = new System.Windows.Forms.Label();
@@ -36,6 +37,8 @@
             this.text_box_teacher_third_name = new System.Windows.Forms.TextBox();
             this.button_confirm = new System.Windows.Forms.Button();
             this.button_cancel = new System.Windows.Forms.Button();
+            this.PanelAddTeacherErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.PanelAddTeacherErrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // text_box_teacher_first_name
@@ -45,6 +48,7 @@
             this.text_box_teacher_first_name.Name = "text_box_teacher_first_name";
             this.text_box_teacher_first_name.Size = new System.Drawing.Size(282, 31);
             this.text_box_teacher_first_name.TabIndex = 0;
+            this.text_box_teacher_first_name.Validating += new System.ComponentModel.CancelEventHandler(this.text_box_teacher_first_name_Validating);
             // 
             // label_teacher_first_name
             // 
@@ -75,6 +79,7 @@
             this.text_box_teacher_last_name.Name = "text_box_teacher_last_name";
             this.text_box_teacher_last_name.Size = new System.Drawing.Size(282, 31);
             this.text_box_teacher_last_name.TabIndex = 3;
+            this.text_box_teacher_last_name.Validating += new System.ComponentModel.CancelEventHandler(this.text_box_teacher_last_name_Validating);
             // 
             // label_teacher_third_name
             // 
@@ -117,6 +122,10 @@
             this.button_cancel.UseVisualStyleBackColor = true;
             this.button_cancel.Click += new System.EventHandler(this.button_cancel_Click);
             // 
+            // PanelAddTeacherErrorProvider
+            // 
+            this.PanelAddTeacherErrorProvider.ContainerControl = this;
+            // 
             // PanelAddTeacher
             // 
             this.AcceptButton = this.button_confirm;
@@ -136,6 +145,8 @@
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "PanelAddTeacher";
             this.Text = "Add Teacher";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PanelAddTeacher_FormClosing);
+            ((System.ComponentModel.ISupportInitialize)(this.PanelAddTeacherErrorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -151,5 +162,6 @@
         private System.Windows.Forms.TextBox text_box_teacher_third_name;
         private System.Windows.Forms.Button button_confirm;
         private System.Windows.Forms.Button button_cancel;
+        private System.Windows.Forms.ErrorProvider PanelAddTeacherErrorProvider;
     }
 }
