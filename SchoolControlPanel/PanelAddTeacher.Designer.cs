@@ -45,7 +45,6 @@
             this.text_box_teacher_first_name.Name = "text_box_teacher_first_name";
             this.text_box_teacher_first_name.Size = new System.Drawing.Size(282, 31);
             this.text_box_teacher_first_name.TabIndex = 0;
-            this.text_box_teacher_first_name.TextChanged += new System.EventHandler(this.text_box_teacher_name_TextChanged);
             // 
             // label_teacher_first_name
             // 
@@ -68,7 +67,6 @@
             this.label_teacher_last_name.Size = new System.Drawing.Size(171, 26);
             this.label_teacher_last_name.TabIndex = 2;
             this.label_teacher_last_name.Text = "Teacher last name:";
-            this.label_teacher_last_name.Click += new System.EventHandler(this.label1_Click);
             // 
             // text_box_teacher_last_name
             // 

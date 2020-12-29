@@ -40,7 +40,6 @@
             this.label_connection_success.Size = new System.Drawing.Size(217, 26);
             this.label_connection_success.TabIndex = 0;
             this.label_connection_success.Text = "Connection established!";
-            this.label_connection_success.Click += new System.EventHandler(this.label1_Click);
             // 
             // PopupConnectionEstablished
             // 
@@ -53,7 +52,6 @@
             this.MinimizeBox = false;
             this.Name = "PopupConnectionEstablished";
             this.Text = "Success!";
-            this.Load += new System.EventHandler(this.PopupConnectionEstablished_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

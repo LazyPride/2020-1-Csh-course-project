@@ -28,21 +28,10 @@ namespace SchoolControlPanel
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button_add_teacher_Click(object sender, EventArgs e)
         {
             PanelAddTeacher panelAddTeacher = new PanelAddTeacher();
             panelAddTeacher.Show(this);
-
         }
     }
 }
