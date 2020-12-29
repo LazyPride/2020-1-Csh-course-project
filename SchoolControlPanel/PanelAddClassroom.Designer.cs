@@ -46,31 +46,31 @@
             this.laber_number.AutoSize = true;
             this.laber_number.Location = new System.Drawing.Point(31, 31);
             this.laber_number.Name = "laber_number";
-            this.laber_number.Size = new System.Drawing.Size(73, 23);
+            this.laber_number.Size = new System.Drawing.Size(78, 23);
             this.laber_number.TabIndex = 2;
-            this.laber_number.Text = "Number";
+            this.laber_number.Text = "Number:";
             // 
             // label_character
             // 
             this.label_character.AutoSize = true;
-            this.label_character.Location = new System.Drawing.Point(110, 31);
+            this.label_character.Location = new System.Drawing.Point(31, 64);
             this.label_character.Name = "label_character";
-            this.label_character.Size = new System.Drawing.Size(85, 23);
+            this.label_character.Size = new System.Drawing.Size(90, 23);
             this.label_character.TabIndex = 3;
-            this.label_character.Text = "Character";
+            this.label_character.Text = "Character:";
             // 
             // label_floor
             // 
             this.label_floor.AutoSize = true;
-            this.label_floor.Location = new System.Drawing.Point(201, 31);
+            this.label_floor.Location = new System.Drawing.Point(31, 98);
             this.label_floor.Name = "label_floor";
-            this.label_floor.Size = new System.Drawing.Size(50, 23);
+            this.label_floor.Size = new System.Drawing.Size(55, 23);
             this.label_floor.TabIndex = 4;
-            this.label_floor.Text = "Floor";
+            this.label_floor.Text = "Floor:";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(35, 75);
+            this.textBox1.Location = new System.Drawing.Point(132, 23);
             this.textBox1.MaxLength = 3;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(58, 31);
@@ -78,7 +78,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(132, 75);
+            this.textBox2.Location = new System.Drawing.Point(132, 61);
             this.textBox2.MaxLength = 1;
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(31, 31);
@@ -86,7 +86,7 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(205, 75);
+            this.textBox3.Location = new System.Drawing.Point(132, 98);
             this.textBox3.MaxLength = 3;
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(52, 31);
@@ -123,7 +123,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.button_cancel;
-            this.ClientSize = new System.Drawing.Size(296, 239);
+            this.ClientSize = new System.Drawing.Size(286, 239);
             this.Controls.Add(this.button_cancel);
             this.Controls.Add(this.button_confirm);
             this.Controls.Add(this.textBox3);
