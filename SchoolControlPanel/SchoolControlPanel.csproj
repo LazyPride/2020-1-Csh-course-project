@@ -109,6 +109,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="PanelAddTeacher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PanelAddTeacher.Designer.cs">
+      <DependentUpon>PanelAddTeacher.cs</DependentUpon>
+    </Compile>
     <Compile Include="PopupConnectionEstablished.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,6 +137,9 @@
     </Compile>
     <EmbeddedResource Include="MainFrame.resx">
       <DependentUpon>MainFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PanelAddTeacher.resx">
+      <DependentUpon>PanelAddTeacher.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PopupConnectionEstablished.resx">
       <DependentUpon>PopupConnectionEstablished.cs</DependentUpon>

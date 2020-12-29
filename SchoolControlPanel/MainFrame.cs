@@ -37,5 +37,12 @@ namespace SchoolControlPanel
         {
 
         }
+
+        private void button_add_teacher_Click(object sender, EventArgs e)
+        {
+            PanelAddTeacher panelAddTeacher = new PanelAddTeacher();
+            panelAddTeacher.Show(this);
+
+        }
     }
 }
