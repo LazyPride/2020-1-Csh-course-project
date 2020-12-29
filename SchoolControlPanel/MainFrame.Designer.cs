@@ -168,6 +168,7 @@
             this.button_add_classroom.TabIndex = 0;
             this.button_add_classroom.Text = "Add classroom";
             this.button_add_classroom.UseVisualStyleBackColor = true;
+            this.button_add_classroom.Click += new System.EventHandler(this.button_add_classroom_Click);
             // 
             // MainFrame
             // 
