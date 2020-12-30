@@ -40,12 +40,14 @@
             this.listbox_classroom = new System.Windows.Forms.ListBox();
             this.checkedLilistbox_students = new System.Windows.Forms.CheckedListBox();
             this.label_students = new System.Windows.Forms.Label();
+            this.label_learning_program = new System.Windows.Forms.Label();
+            this.listbox_learning_program = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // button_confirm
             // 
             this.button_confirm.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.button_confirm.Location = new System.Drawing.Point(145, 712);
+            this.button_confirm.Location = new System.Drawing.Point(145, 865);
             this.button_confirm.Name = "button_confirm";
             this.button_confirm.Size = new System.Drawing.Size(100, 40);
             this.button_confirm.TabIndex = 9;
@@ -55,7 +57,7 @@
             // button_cancel
             // 
             this.button_cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button_cancel.Location = new System.Drawing.Point(251, 712);
+            this.button_cancel.Location = new System.Drawing.Point(251, 865);
             this.button_cancel.Name = "button_cancel";
             this.button_cancel.Size = new System.Drawing.Size(100, 40);
             this.button_cancel.TabIndex = 10;
@@ -135,7 +137,7 @@
             // checkedLilistbox_students
             // 
             this.checkedLilistbox_students.FormattingEnabled = true;
-            this.checkedLilistbox_students.Location = new System.Drawing.Point(32, 500);
+            this.checkedLilistbox_students.Location = new System.Drawing.Point(32, 653);
             this.checkedLilistbox_students.Name = "checkedLilistbox_students";
             this.checkedLilistbox_students.Size = new System.Drawing.Size(442, 186);
             this.checkedLilistbox_students.TabIndex = 20;
@@ -143,11 +145,29 @@
             // label_students
             // 
             this.label_students.AutoSize = true;
-            this.label_students.Location = new System.Drawing.Point(28, 474);
+            this.label_students.Location = new System.Drawing.Point(28, 627);
             this.label_students.Name = "label_students";
             this.label_students.Size = new System.Drawing.Size(143, 23);
             this.label_students.TabIndex = 21;
             this.label_students.Text = "Choose students:";
+            // 
+            // label_learning_program
+            // 
+            this.label_learning_program.AutoSize = true;
+            this.label_learning_program.Location = new System.Drawing.Point(28, 473);
+            this.label_learning_program.Name = "label_learning_program";
+            this.label_learning_program.Size = new System.Drawing.Size(209, 23);
+            this.label_learning_program.TabIndex = 23;
+            this.label_learning_program.Text = "Choose learning program:";
+            // 
+            // listbox_learning_program
+            // 
+            this.listbox_learning_program.FormattingEnabled = true;
+            this.listbox_learning_program.ItemHeight = 23;
+            this.listbox_learning_program.Location = new System.Drawing.Point(32, 499);
+            this.listbox_learning_program.Name = "listbox_learning_program";
+            this.listbox_learning_program.Size = new System.Drawing.Size(442, 119);
+            this.listbox_learning_program.TabIndex = 22;
             // 
             // PanelAddStudentGroup
             // 
@@ -155,7 +175,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.button_cancel;
-            this.ClientSize = new System.Drawing.Size(533, 764);
+            this.ClientSize = new System.Drawing.Size(527, 927);
+            this.Controls.Add(this.label_learning_program);
+            this.Controls.Add(this.listbox_learning_program);
             this.Controls.Add(this.label_students);
             this.Controls.Add(this.checkedLilistbox_students);
             this.Controls.Add(this.label_classroom);
@@ -191,5 +213,7 @@
         private System.Windows.Forms.ListBox listbox_classroom;
         private System.Windows.Forms.CheckedListBox checkedLilistbox_students;
         private System.Windows.Forms.Label label_students;
+        private System.Windows.Forms.Label label_learning_program;
+        private System.Windows.Forms.ListBox listbox_learning_program;
     }
 }
