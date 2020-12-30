@@ -43,7 +43,7 @@
           <Property Name="first_name" Type="varchar" MaxLength="255" Nullable="false" />
           <Property Name="last_name" Type="varchar" MaxLength="255" Nullable="false" />
           <Property Name="third_name" Type="varchar" MaxLength="255" />
-          <Property Name="student_group_id" Type="int" Nullable="false" />
+          <Property Name="student_group_id" Type="int" />
         </EntityType>
         <EntityType Name="student_group">
           <Key>
@@ -144,7 +144,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="student_ibfk_1">
-          <End Role="student_group" Type="Self.student_group" Multiplicity="1" />
+          <End Role="student_group" Type="Self.student_group" Multiplicity="0..1" />
           <End Role="student" Type="Self.student" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="student_group">

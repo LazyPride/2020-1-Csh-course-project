@@ -114,6 +114,7 @@
             this.button_add_student_group.TabIndex = 6;
             this.button_add_student_group.Text = "Add student group";
             this.button_add_student_group.UseVisualStyleBackColor = true;
+            this.button_add_student_group.Click += new System.EventHandler(this.button_add_student_group_Click);
             // 
             // button_add_student
             // 
@@ -125,6 +126,7 @@
             this.button_add_student.TabIndex = 5;
             this.button_add_student.Text = "Add student";
             this.button_add_student.UseVisualStyleBackColor = true;
+            this.button_add_student.Click += new System.EventHandler(this.button_add_student_Click);
             // 
             // button_add_mark
             // 

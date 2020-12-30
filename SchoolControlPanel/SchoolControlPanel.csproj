@@ -121,11 +121,23 @@
     <Compile Include="PanelAddLearningProgram.Designer.cs">
       <DependentUpon>PanelAddLearningProgram.cs</DependentUpon>
     </Compile>
+    <Compile Include="PanelAddStudentGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PanelAddStudentGroup.Designer.cs">
+      <DependentUpon>PanelAddStudentGroup.cs</DependentUpon>
+    </Compile>
     <Compile Include="PanelAddSubject.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="PanelAddSubject.Designer.cs">
       <DependentUpon>PanelAddSubject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PanelAddStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PanelAddStudent.Designer.cs">
+      <DependentUpon>PanelAddStudent.cs</DependentUpon>
     </Compile>
     <Compile Include="PanelAddTeacher.cs">
       <SubType>Form</SubType>
@@ -156,8 +168,14 @@
     <EmbeddedResource Include="PanelAddLearningProgram.resx">
       <DependentUpon>PanelAddLearningProgram.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PanelAddStudentGroup.resx">
+      <DependentUpon>PanelAddStudentGroup.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PanelAddSubject.resx">
       <DependentUpon>PanelAddSubject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PanelAddStudent.resx">
+      <DependentUpon>PanelAddStudent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PanelAddTeacher.resx">
       <DependentUpon>PanelAddTeacher.cs</DependentUpon>
