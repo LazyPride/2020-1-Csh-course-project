@@ -121,6 +121,12 @@
     <Compile Include="PanelAddLearningProgram.Designer.cs">
       <DependentUpon>PanelAddLearningProgram.cs</DependentUpon>
     </Compile>
+    <Compile Include="PanelAddMark.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PanelAddMark.Designer.cs">
+      <DependentUpon>PanelAddMark.cs</DependentUpon>
+    </Compile>
     <Compile Include="PanelAddStudentGroup.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,6 +173,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PanelAddLearningProgram.resx">
       <DependentUpon>PanelAddLearningProgram.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PanelAddMark.resx">
+      <DependentUpon>PanelAddMark.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PanelAddStudentGroup.resx">
       <DependentUpon>PanelAddStudentGroup.cs</DependentUpon>

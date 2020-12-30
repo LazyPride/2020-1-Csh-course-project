@@ -138,6 +138,7 @@
             this.button_add_mark.TabIndex = 4;
             this.button_add_mark.Text = "Add mark";
             this.button_add_mark.UseVisualStyleBackColor = true;
+            this.button_add_mark.Click += new System.EventHandler(this.button_add_mark_Click);
             // 
             // button_add_learning_program
             // 

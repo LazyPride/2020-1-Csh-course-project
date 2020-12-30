@@ -62,5 +62,11 @@ namespace SchoolControlPanel
             PanelAddStudent panelAddStudent = new PanelAddStudent();
             panelAddStudent.Show(this);
         }
+
+        private void button_add_mark_Click(object sender, EventArgs e)
+        {
+            PanelAddMark mark = new PanelAddMark();
+            mark.Show(this);
+        }
     }
 }
