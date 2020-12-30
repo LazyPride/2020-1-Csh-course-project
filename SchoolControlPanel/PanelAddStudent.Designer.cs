@@ -48,7 +48,6 @@
             this.text_box_student_first_name.Name = "text_box_student_first_name";
             this.text_box_student_first_name.Size = new System.Drawing.Size(282, 31);
             this.text_box_student_first_name.TabIndex = 0;
-            this.text_box_student_first_name.Validating += new System.ComponentModel.CancelEventHandler(this.text_box_student_first_name_Validating);
             // 
             // label_student_first_name
             // 
@@ -79,7 +78,6 @@
             this.text_box_student_last_name.Name = "text_box_student_last_name";
             this.text_box_student_last_name.Size = new System.Drawing.Size(282, 31);
             this.text_box_student_last_name.TabIndex = 3;
-            this.text_box_student_last_name.Validating += new System.ComponentModel.CancelEventHandler(this.text_box_student_last_name_Validating);
             // 
             // label_student_third_name
             // 

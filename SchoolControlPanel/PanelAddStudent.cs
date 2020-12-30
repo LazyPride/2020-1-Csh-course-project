@@ -12,11 +12,19 @@ namespace SchoolControlPanel
 {
     public partial class PanelAddStudent : Form
     {
+        private ValidatorText validatorText_first_name;
+        private ValidatorText validatorText_last_name;
         public PanelAddStudent()
         {
             InitializeComponent();
             CausesValidation = false;
             AutoValidate = AutoValidate.EnableAllowFocusChange;
+            validatorText_first_name = new ValidatorText(text_box_student_first_name, PanelAddTeacherErrorProvider);
+            validatorText_last_name = new ValidatorText(text_box_student_last_name, PanelAddTeacherErrorProvider);
+
+            this.text_box_student_first_name.Validating += new System.ComponentModel.CancelEventHandler(this.validatorText_first_name.Validating);
+            this.text_box_student_last_name.Validating += new System.ComponentModel.CancelEventHandler(this.validatorText_last_name.Validating);
+
         }
 
         private void button_confirm_Click(object sender, EventArgs e)
@@ -29,7 +37,7 @@ namespace SchoolControlPanel
                     first_name = text_box_student_first_name.Text,
                     last_name = text_box_student_last_name.Text,
                     third_name = text_box_student_third_name.Text,
-                    student_group_id = 0
+                    student_group_id = -1
                 };
 
                 using (schoolEntities db = new schoolEntities())
@@ -46,37 +54,10 @@ namespace SchoolControlPanel
             this.Close();
         }
 
-        private void text_box_student_first_name_Validating(object sender, CancelEventArgs e)
-        {
-            if (string.IsNullOrEmpty(text_box_student_first_name.Text))
-            {
-                e.Cancel = true;
-                PanelAddTeacherErrorProvider.SetError(text_box_student_first_name, "Requeired!");
-            }
-            else
-            {
-                e.Cancel = false;
-                PanelAddTeacherErrorProvider.SetError(text_box_student_first_name, null);
-            }
-        }
-
         private void PanelAddStudent_FormClosing(object sender, FormClosingEventArgs e)
         {
             e.Cancel = false;
         }
 
-        private void text_box_student_last_name_Validating(object sender, CancelEventArgs e)
-        {
-            if (string.IsNullOrEmpty(text_box_student_last_name.Text))
-            {
-                e.Cancel = true;
-                PanelAddTeacherErrorProvider.SetError(text_box_student_last_name, "Requeired!");
-            }
-            else
-            {
-                e.Cancel = false;
-                PanelAddTeacherErrorProvider.SetError(text_box_student_last_name, null);
-            }
-        }
     }
 }
