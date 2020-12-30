@@ -25,6 +25,7 @@ namespace SchoolControlPanel
         public Nullable<int> classroom_id { get; set; }
         public int entry_year { get; set; }
         public int learning_program_id { get; set; }
+        public string name { get; set; }
     
         public virtual classroom classroom { get; set; }
         public virtual learning_program learning_program { get; set; }

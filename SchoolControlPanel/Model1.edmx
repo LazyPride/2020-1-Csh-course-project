@@ -54,6 +54,7 @@
           <Property Name="classroom_id" Type="int" />
           <Property Name="entry_year" Type="int" Nullable="false" />
           <Property Name="learning_program_id" Type="int" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="255" Nullable="false" />
         </EntityType>
         <EntityType Name="subject">
           <Key>
@@ -283,6 +284,7 @@
           <NavigationProperty Name="learning_program" Relationship="Self.student_group_ibfk_3" FromRole="student_group" ToRole="learning_program" />
           <NavigationProperty Name="students" Relationship="Self.student_ibfk_1" FromRole="student_group" ToRole="student" />
           <NavigationProperty Name="teacher" Relationship="Self.student_group_ibfk_1" FromRole="student_group" ToRole="teacher" />
+          <Property Name="name" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="subject">
           <Key>
@@ -470,6 +472,7 @@
           <EntitySetMapping Name="student_group">
             <EntityTypeMapping TypeName="schoolModel.student_group">
               <MappingFragment StoreEntitySet="student_group">
+                <ScalarProperty Name="name" ColumnName="name" />
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="teacher_id" ColumnName="teacher_id" />
                 <ScalarProperty Name="classroom_id" ColumnName="classroom_id" />
