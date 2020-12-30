@@ -24,7 +24,6 @@ namespace SchoolControlPanel
 
             this.text_box_student_first_name.Validating += new System.ComponentModel.CancelEventHandler(this.validatorText_first_name.Validating);
             this.text_box_student_last_name.Validating += new System.ComponentModel.CancelEventHandler(this.validatorText_last_name.Validating);
-
         }
 
         private void button_confirm_Click(object sender, EventArgs e)

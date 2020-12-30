@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.button_confirm = new System.Windows.Forms.Button();
             this.button_cancel = new System.Windows.Forms.Button();
             this.textbox_year_of_creation = new System.Windows.Forms.TextBox();
@@ -36,6 +37,8 @@
             this.laber_name = new System.Windows.Forms.Label();
             this.checkedlistbox_subjects = new System.Windows.Forms.CheckedListBox();
             this.label_subject_list = new System.Windows.Forms.Label();
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // button_confirm
@@ -47,6 +50,7 @@
             this.button_confirm.TabIndex = 9;
             this.button_confirm.Text = "Add";
             this.button_confirm.UseVisualStyleBackColor = true;
+            this.button_confirm.Click += new System.EventHandler(this.button_confirm_Click);
             // 
             // button_cancel
             // 
@@ -57,6 +61,7 @@
             this.button_cancel.TabIndex = 10;
             this.button_cancel.Text = "Close";
             this.button_cancel.UseVisualStyleBackColor = true;
+            this.button_cancel.Click += new System.EventHandler(this.button_cancel_Click);
             // 
             // textbox_year_of_creation
             // 
@@ -94,7 +99,9 @@
             // 
             // checkedlistbox_subjects
             // 
+            this.checkedlistbox_subjects.CheckOnClick = true;
             this.checkedlistbox_subjects.FormattingEnabled = true;
+            this.checkedlistbox_subjects.HorizontalScrollbar = true;
             this.checkedlistbox_subjects.Location = new System.Drawing.Point(32, 152);
             this.checkedlistbox_subjects.Name = "checkedlistbox_subjects";
             this.checkedlistbox_subjects.Size = new System.Drawing.Size(632, 212);
@@ -108,6 +115,10 @@
             this.label_subject_list.Size = new System.Drawing.Size(140, 23);
             this.label_subject_list.TabIndex = 17;
             this.label_subject_list.Text = "Choose subjects:";
+            // 
+            // errorProvider
+            // 
+            this.errorProvider.ContainerControl = this;
             // 
             // PanelAddLearningProgram
             // 
@@ -128,6 +139,9 @@
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "PanelAddLearningProgram";
             this.Text = "Add Learning Program";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PanelAddLearningProgram_FormClosing);
+            this.Load += new System.EventHandler(this.PanelAddLearningProgram_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -143,5 +157,6 @@
         private System.Windows.Forms.Label laber_name;
         private System.Windows.Forms.CheckedListBox checkedlistbox_subjects;
         private System.Windows.Forms.Label label_subject_list;
+        private System.Windows.Forms.ErrorProvider errorProvider;
     }
 }
