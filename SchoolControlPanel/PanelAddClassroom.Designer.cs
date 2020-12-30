@@ -75,6 +75,9 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(58, 31);
             this.textBox1.TabIndex = 5;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            validatorNumber1 = new ValidatorNumber(textBox1, errorProvider);
+            this.textBox1.Validating += new System.ComponentModel.CancelEventHandler(this.validatorNumber1.Validating);
             // 
             // textBox2
             // 
@@ -83,6 +86,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(31, 31);
             this.textBox2.TabIndex = 6;
+            this.textBox2.Validating += new System.ComponentModel.CancelEventHandler(this.textBox2_Validating);
             // 
             // textBox3
             // 
@@ -91,6 +95,8 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(52, 31);
             this.textBox3.TabIndex = 7;
+            validatorNumber2 = new ValidatorNumber(textBox3, errorProvider);
+            this.textBox3.Validating += new System.ComponentModel.CancelEventHandler(this.validatorNumber2.Validating);
             // 
             // button_confirm
             // 
@@ -112,6 +118,7 @@
             this.button_cancel.TabIndex = 9;
             this.button_cancel.Text = "Close";
             this.button_cancel.UseVisualStyleBackColor = true;
+            this.button_cancel.Click += new System.EventHandler(this.button_cancel_Click);
             // 
             // errorProvider
             // 
@@ -133,9 +140,10 @@
             this.Controls.Add(this.label_character);
             this.Controls.Add(this.laber_number);
             this.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "PanelAddClassroom";
             this.Text = "Add Classroom";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PanelAddClassroom_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -152,5 +160,7 @@
         private System.Windows.Forms.Button button_confirm;
         private System.Windows.Forms.Button button_cancel;
         private System.Windows.Forms.ErrorProvider errorProvider;
+        ValidatorNumber validatorNumber1;
+        ValidatorNumber validatorNumber2;
     }
 }

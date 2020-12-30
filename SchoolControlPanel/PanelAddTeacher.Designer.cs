@@ -48,7 +48,8 @@
             this.text_box_teacher_first_name.Name = "text_box_teacher_first_name";
             this.text_box_teacher_first_name.Size = new System.Drawing.Size(282, 31);
             this.text_box_teacher_first_name.TabIndex = 0;
-            this.text_box_teacher_first_name.Validating += new System.ComponentModel.CancelEventHandler(this.text_box_teacher_first_name_Validating);
+            validatorText_first_name = new ValidatorText(text_box_teacher_first_name, PanelAddTeacherErrorProvider);
+            this.text_box_teacher_first_name.Validating += new System.ComponentModel.CancelEventHandler(validatorText_first_name.Validating);
             // 
             // label_teacher_first_name
             // 
@@ -79,7 +80,8 @@
             this.text_box_teacher_last_name.Name = "text_box_teacher_last_name";
             this.text_box_teacher_last_name.Size = new System.Drawing.Size(282, 31);
             this.text_box_teacher_last_name.TabIndex = 3;
-            this.text_box_teacher_last_name.Validating += new System.ComponentModel.CancelEventHandler(this.text_box_teacher_last_name_Validating);
+            validatorText_last_name = new ValidatorText(text_box_teacher_last_name, PanelAddTeacherErrorProvider);
+            this.text_box_teacher_last_name.Validating += new System.ComponentModel.CancelEventHandler(validatorText_last_name.Validating);
             // 
             // label_teacher_third_name
             // 
@@ -163,5 +165,7 @@
         private System.Windows.Forms.Button button_confirm;
         private System.Windows.Forms.Button button_cancel;
         private System.Windows.Forms.ErrorProvider PanelAddTeacherErrorProvider;
+        private ValidatorText validatorText_first_name;
+        private ValidatorText validatorText_last_name;
     }
 }

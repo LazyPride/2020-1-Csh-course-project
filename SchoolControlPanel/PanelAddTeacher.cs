@@ -45,37 +45,10 @@ namespace SchoolControlPanel
             this.Close();
         }
 
-        private void text_box_teacher_first_name_Validating(object sender, CancelEventArgs e)
-        {
-            if (string.IsNullOrEmpty(text_box_teacher_first_name.Text))
-            {
-                e.Cancel = true;
-                PanelAddTeacherErrorProvider.SetError(text_box_teacher_first_name, "Requeired!");
-            }
-            else
-            {
-                e.Cancel = false;
-                PanelAddTeacherErrorProvider.SetError(text_box_teacher_first_name, null);
-            }
-        }
-
         private void PanelAddTeacher_FormClosing(object sender, FormClosingEventArgs e)
         {
             e.Cancel = false;
         }
 
-        private void text_box_teacher_last_name_Validating(object sender, CancelEventArgs e)
-        {
-            if (string.IsNullOrEmpty(text_box_teacher_last_name.Text))
-            {
-                e.Cancel = true;
-                PanelAddTeacherErrorProvider.SetError(text_box_teacher_last_name, "Requeired!");
-            }
-            else
-            {
-                e.Cancel = false;
-                PanelAddTeacherErrorProvider.SetError(text_box_teacher_last_name, null);
-            }
-        }
     }
 }
