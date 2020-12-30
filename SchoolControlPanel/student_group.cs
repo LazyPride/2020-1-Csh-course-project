@@ -21,11 +21,11 @@ namespace SchoolControlPanel
         }
     
         public int id { get; set; }
-        public Nullable<int> teacher_id { get; set; }
-        public Nullable<int> classroom_id { get; set; }
+        public int teacher_id { get; set; }
+        public int classroom_id { get; set; }
+        public string name { get; set; }
         public int entry_year { get; set; }
         public int learning_program_id { get; set; }
-        public string name { get; set; }
     
         public virtual classroom classroom { get; set; }
         public virtual learning_program learning_program { get; set; }
