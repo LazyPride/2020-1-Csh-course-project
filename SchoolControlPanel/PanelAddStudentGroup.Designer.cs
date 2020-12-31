@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.button_confirm = new System.Windows.Forms.Button();
             this.button_cancel = new System.Windows.Forms.Button();
             this.textbox_year_of_creation = new System.Windows.Forms.TextBox();
@@ -42,6 +43,8 @@
             this.label_students = new System.Windows.Forms.Label();
             this.label_learning_program = new System.Windows.Forms.Label();
             this.listbox_learning_program = new System.Windows.Forms.ListBox();
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // button_confirm
@@ -53,6 +56,7 @@
             this.button_confirm.TabIndex = 9;
             this.button_confirm.Text = "Add";
             this.button_confirm.UseVisualStyleBackColor = true;
+            this.button_confirm.Click += new System.EventHandler(this.button_confirm_Click);
             // 
             // button_cancel
             // 
@@ -63,6 +67,7 @@
             this.button_cancel.TabIndex = 10;
             this.button_cancel.Text = "Close";
             this.button_cancel.UseVisualStyleBackColor = true;
+            this.button_cancel.Click += new System.EventHandler(this.button_cancel_Click);
             // 
             // textbox_year_of_creation
             // 
@@ -75,7 +80,7 @@
             // textbox_group_name
             // 
             this.textbox_group_name.Location = new System.Drawing.Point(170, 42);
-            this.textbox_group_name.MaxLength = 3;
+            this.textbox_group_name.MaxLength = 65536;
             this.textbox_group_name.Name = "textbox_group_name";
             this.textbox_group_name.Size = new System.Drawing.Size(292, 31);
             this.textbox_group_name.TabIndex = 14;
@@ -136,6 +141,7 @@
             // 
             // checkedLilistbox_students
             // 
+            this.checkedLilistbox_students.CheckOnClick = true;
             this.checkedLilistbox_students.FormattingEnabled = true;
             this.checkedLilistbox_students.Location = new System.Drawing.Point(32, 653);
             this.checkedLilistbox_students.Name = "checkedLilistbox_students";
@@ -169,6 +175,10 @@
             this.listbox_learning_program.Size = new System.Drawing.Size(442, 119);
             this.listbox_learning_program.TabIndex = 22;
             // 
+            // errorProvider
+            // 
+            this.errorProvider.ContainerControl = this;
+            // 
             // PanelAddStudentGroup
             // 
             this.AcceptButton = this.button_confirm;
@@ -194,6 +204,9 @@
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "PanelAddStudentGroup";
             this.Text = "Add Student Group";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PanelAddStudentGroup_FormClosing);
+            this.Load += new System.EventHandler(this.PanelAddStudentGroup_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -215,5 +228,6 @@
         private System.Windows.Forms.Label label_students;
         private System.Windows.Forms.Label label_learning_program;
         private System.Windows.Forms.ListBox listbox_learning_program;
+        private System.Windows.Forms.ErrorProvider errorProvider;
     }
 }

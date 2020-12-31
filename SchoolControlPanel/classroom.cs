@@ -27,5 +27,37 @@ namespace SchoolControlPanel
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<student_group> student_group { get; set; }
+        public override string ToString()
+        {
+            string str = "";
+            if (string.IsNullOrWhiteSpace(secondary_num))
+            {
+                str = String.Format("{0}", primary_num);
+            }
+            else
+            {
+                str = String.Format("{0}-{1}", primary_num, secondary_num);
+            }
+
+            if (student_group.Count > 0)
+            {
+                str += " (Occupied by";
+            }
+
+            foreach (student_group s in student_group)
+            {
+                if (s.id != -1)
+                {
+                    str += " " + s.name;
+                }
+            }
+
+            if (student_group.Count > 0)
+            {
+                str += ")";
+            }
+
+            return str;
+        }
     }
 }

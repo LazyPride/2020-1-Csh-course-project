@@ -74,7 +74,7 @@
             // textbox_lesson_name
             // 
             this.textbox_lesson_name.Location = new System.Drawing.Point(239, 47);
-            this.textbox_lesson_name.MaxLength = 3;
+            this.textbox_lesson_name.MaxLength = 65536;
             this.textbox_lesson_name.Name = "textbox_lesson_name";
             this.textbox_lesson_name.Size = new System.Drawing.Size(292, 31);
             this.textbox_lesson_name.TabIndex = 14;

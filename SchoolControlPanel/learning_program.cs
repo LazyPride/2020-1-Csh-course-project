@@ -29,5 +29,9 @@ namespace SchoolControlPanel
         public virtual ICollection<student_group> student_group { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<subject> subjects { get; set; }
+        public override string ToString()
+        {
+            return String.Format("{0} (Year: {1})", name, year_of_creation);
+        }
     }
 }
