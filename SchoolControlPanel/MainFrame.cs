@@ -68,5 +68,11 @@ namespace SchoolControlPanel
             PanelAddMark mark = new PanelAddMark();
             mark.Show(this);
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            PanelDiary diary = new PanelDiary();
+            diary.Show(this);
+        }
     }
 }

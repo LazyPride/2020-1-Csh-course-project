@@ -115,6 +115,12 @@
     <Compile Include="MyStudent.cs" />
     <Compile Include="MyStudentGroup.cs" />
     <Compile Include="MyTeacher.cs" />
+    <Compile Include="PanelDiary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PanelDiary.Designer.cs">
+      <DependentUpon>PanelDiary.cs</DependentUpon>
+    </Compile>
     <Compile Include="PanelAddClassroom.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -178,6 +184,9 @@
     <Compile Include="ValidatorText.cs" />
     <EmbeddedResource Include="MainFrame.resx">
       <DependentUpon>MainFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PanelDiary.resx">
+      <DependentUpon>PanelDiary.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PanelAddClassroom.resx">
       <DependentUpon>PanelAddClassroom.cs</DependentUpon>

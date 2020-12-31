@@ -33,11 +33,11 @@
             this.label_character = new System.Windows.Forms.Label();
             this.label_floor = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.button_confirm = new System.Windows.Forms.Button();
             this.button_cancel = new System.Windows.Forms.Button();
-            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
@@ -76,8 +76,10 @@
             this.textBox1.Size = new System.Drawing.Size(58, 31);
             this.textBox1.TabIndex = 5;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            validatorNumber1 = new ValidatorNumber(textBox1, errorProvider);
-            this.textBox1.Validating += new System.ComponentModel.CancelEventHandler(this.validatorNumber1.Validating);
+            // 
+            // errorProvider
+            // 
+            this.errorProvider.ContainerControl = this;
             // 
             // textBox2
             // 
@@ -95,8 +97,6 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(52, 31);
             this.textBox3.TabIndex = 7;
-            validatorNumber2 = new ValidatorNumber(textBox3, errorProvider);
-            this.textBox3.Validating += new System.ComponentModel.CancelEventHandler(this.validatorNumber2.Validating);
             // 
             // button_confirm
             // 
@@ -120,17 +120,13 @@
             this.button_cancel.UseVisualStyleBackColor = true;
             this.button_cancel.Click += new System.EventHandler(this.button_cancel_Click);
             // 
-            // errorProvider
-            // 
-            this.errorProvider.ContainerControl = this;
-            // 
             // PanelAddClassroom
             // 
             this.AcceptButton = this.button_confirm;
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.button_cancel;
-            this.ClientSize = new System.Drawing.Size(286, 239);
+            this.ClientSize = new System.Drawing.Size(286, 216);
             this.Controls.Add(this.button_cancel);
             this.Controls.Add(this.button_confirm);
             this.Controls.Add(this.textBox3);
