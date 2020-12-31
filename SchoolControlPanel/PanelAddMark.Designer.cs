@@ -35,12 +35,12 @@
             this.text_lesson_number = new System.Windows.Forms.TextBox();
             this.button_confirm = new System.Windows.Forms.Button();
             this.button_cancel = new System.Windows.Forms.Button();
-            this.PanelAddTeacherErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.label_student = new System.Windows.Forms.Label();
             this.listbox_student = new System.Windows.Forms.ListBox();
             this.listbox_subject = new System.Windows.Forms.ListBox();
             this.label_subject = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.PanelAddTeacherErrorProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // text_mark
@@ -50,7 +50,6 @@
             this.text_mark.Name = "text_mark";
             this.text_mark.Size = new System.Drawing.Size(282, 31);
             this.text_mark.TabIndex = 0;
-            this.text_mark.Validating += new System.ComponentModel.CancelEventHandler(this.text_box_student_first_name_Validating);
             // 
             // label_mark
             // 
@@ -81,7 +80,6 @@
             this.text_lesson_number.Name = "text_lesson_number";
             this.text_lesson_number.Size = new System.Drawing.Size(282, 31);
             this.text_lesson_number.TabIndex = 3;
-            this.text_lesson_number.Validating += new System.ComponentModel.CancelEventHandler(this.text_box_student_last_name_Validating);
             // 
             // button_confirm
             // 
@@ -105,9 +103,9 @@
             this.button_cancel.UseVisualStyleBackColor = true;
             this.button_cancel.Click += new System.EventHandler(this.button_cancel_Click);
             // 
-            // PanelAddTeacherErrorProvider
+            // errorProvider
             // 
-            this.PanelAddTeacherErrorProvider.ContainerControl = this;
+            this.errorProvider.ContainerControl = this;
             // 
             // label_student
             // 
@@ -167,7 +165,8 @@
             this.Name = "PanelAddMark";
             this.Text = "Add Student";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PanelAddStudent_FormClosing);
-            ((System.ComponentModel.ISupportInitialize)(this.PanelAddTeacherErrorProvider)).EndInit();
+            this.Load += new System.EventHandler(this.PanelAddMark_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -181,7 +180,7 @@
         private System.Windows.Forms.TextBox text_lesson_number;
         private System.Windows.Forms.Button button_confirm;
         private System.Windows.Forms.Button button_cancel;
-        private System.Windows.Forms.ErrorProvider PanelAddTeacherErrorProvider;
+        private System.Windows.Forms.ErrorProvider errorProvider;
         private System.Windows.Forms.ListBox listbox_subject;
         private System.Windows.Forms.Label label_subject;
         private System.Windows.Forms.ListBox listbox_student;
