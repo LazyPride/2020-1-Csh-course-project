@@ -1,5 +1,9 @@
 # Course project at the NURE
 
+## Instalation tutorial
+
+ - [Installing MySQL 8.0 Server with EntityFramework in Visual Studio 2019](https://gist.github.com/pishangujeniya/a59f69a8251cd54fa0bb453da978eb0f)
+
 ## Useful links
 
  - [How To Use Validation In Windows Form Application](https://www.c-sharpcorner.com/blogs/how-to-use-validation-in-windows-form-application#:~:text=Step%201%3A%20Create%20a%20Windows,double%20click%20on%20%E2%80%9Cvalidating%E2%80%9D.)
