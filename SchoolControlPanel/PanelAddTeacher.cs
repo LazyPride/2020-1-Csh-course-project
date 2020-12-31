@@ -22,17 +22,32 @@ namespace SchoolControlPanel
         private void button_confirm_Click(object sender, EventArgs e)
         {
 
+            
+
             if (ValidateChildren(ValidationConstraints.Enabled))
             {
                 teacher t = new teacher
                 {
                     first_name = text_box_teacher_first_name.Text,
                     last_name = text_box_teacher_last_name.Text,
-                    third_name = text_box_teacher_third_name.Text
+                    third_name = text_box_teacher_third_name.Text,
                 };
+
+
 
                 using (schoolEntities db = new schoolEntities())
                 {
+                    int[] keys = checkedlistbox_subjects.CheckedItems.Cast<subject>().Select(s => s.id).ToArray();
+                    foreach (var key in keys)
+                    {
+                        subject s = db.subjects.Find(key);
+                        if (s != null)
+                        {
+                            s.teachers.Add(t);
+                            t.subjects.Add(s);
+                        }
+                    }
+
                     db.teachers.Add(t);
                     db.SaveChanges();
                     MessageBox.Show(string.Format("Teacher {0} {1} {2} is added!", t.first_name, t.last_name, t.third_name), "Success!");
@@ -50,5 +65,12 @@ namespace SchoolControlPanel
             e.Cancel = false;
         }
 
+        private void PanelAddTeacher_Load(object sender, EventArgs e)
+        {
+            using (schoolEntities db = new schoolEntities())
+            {
+                checkedlistbox_subjects.Items.AddRange(db.subjects.ToArray<subject>());
+            }
+        }
     }
 }

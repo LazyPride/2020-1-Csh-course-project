@@ -43,15 +43,15 @@
           <Property Name="first_name" Type="varchar" MaxLength="255" Nullable="false" />
           <Property Name="last_name" Type="varchar" MaxLength="255" Nullable="false" />
           <Property Name="third_name" Type="varchar" MaxLength="255" />
-          <Property Name="student_group_id" Type="int" Nullable="false" />
+          <Property Name="student_group_id" Type="int" />
         </EntityType>
         <EntityType Name="student_group">
           <Key>
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="teacher_id" Type="int" />
-          <Property Name="classroom_id" Type="int" />
+          <Property Name="teacher_id" Type="int" Nullable="false" />
+          <Property Name="classroom_id" Type="int" Nullable="false" />
           <Property Name="name" Type="varchar" MaxLength="255" Nullable="false" />
           <Property Name="entry_year" Type="int" Nullable="false" />
           <Property Name="learning_program_id" Type="int" Nullable="false" />
@@ -64,6 +64,13 @@
           <Property Name="name" Type="varchar" MaxLength="255" Nullable="false" />
           <Property Name="year_of_creation" Type="int" Nullable="false" />
           <Property Name="quantity" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="subject_to_learning_program">
+          <Key>
+            <PropertyRef Name="subject_id" />
+            <PropertyRef Name="learning_program_id" />
+          </Key>
+          <Property Name="subject_id" Type="int" Nullable="false" />
           <Property Name="learning_program_id" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="subject_to_teacher">
@@ -108,7 +115,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="student_group_ibfk_1">
-          <End Role="teacher" Type="Self.teacher" Multiplicity="0..1" />
+          <End Role="teacher" Type="Self.teacher" Multiplicity="1" />
           <End Role="student_group" Type="Self.student_group" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="teacher">
@@ -120,7 +127,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="student_group_ibfk_2">
-          <End Role="classroom" Type="Self.classroom" Multiplicity="0..1" />
+          <End Role="classroom" Type="Self.classroom" Multiplicity="1" />
           <End Role="student_group" Type="Self.student_group" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="classroom">
@@ -144,7 +151,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="student_ibfk_1">
-          <End Role="student_group" Type="Self.student_group" Multiplicity="1" />
+          <End Role="student_group" Type="Self.student_group" Multiplicity="0..1" />
           <End Role="student" Type="Self.student" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="student_group">
@@ -155,14 +162,26 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="subject_ibfk_1">
+        <Association Name="subject_to_learning_program_ibfk_1">
+          <End Role="subject" Type="Self.subject" Multiplicity="1" />
+          <End Role="subject_to_learning_program" Type="Self.subject_to_learning_program" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="subject">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="subject_to_learning_program">
+              <PropertyRef Name="subject_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="subject_to_learning_program_ibfk_2">
           <End Role="learning_program" Type="Self.learning_program" Multiplicity="1" />
-          <End Role="subject" Type="Self.subject" Multiplicity="*" />
+          <End Role="subject_to_learning_program" Type="Self.subject_to_learning_program" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="learning_program">
               <PropertyRef Name="id" />
             </Principal>
-            <Dependent Role="subject">
+            <Dependent Role="subject_to_learning_program">
               <PropertyRef Name="learning_program_id" />
             </Dependent>
           </ReferentialConstraint>
@@ -198,6 +217,7 @@
           <EntitySet Name="student" EntityType="Self.student" Schema="school" store:Type="Tables" />
           <EntitySet Name="student_group" EntityType="Self.student_group" Schema="school" store:Type="Tables" />
           <EntitySet Name="subject" EntityType="Self.subject" Schema="school" store:Type="Tables" />
+          <EntitySet Name="subject_to_learning_program" EntityType="Self.subject_to_learning_program" Schema="school" store:Type="Tables" />
           <EntitySet Name="subject_to_teacher" EntityType="Self.subject_to_teacher" Schema="school" store:Type="Tables" />
           <EntitySet Name="teacher" EntityType="Self.teacher" Schema="school" store:Type="Tables" />
           <AssociationSet Name="lesson_mark_ibfk_1" Association="Self.lesson_mark_ibfk_1">
@@ -224,9 +244,13 @@
             <End Role="student_group" EntitySet="student_group" />
             <End Role="student" EntitySet="student" />
           </AssociationSet>
-          <AssociationSet Name="subject_ibfk_1" Association="Self.subject_ibfk_1">
-            <End Role="learning_program" EntitySet="learning_program" />
+          <AssociationSet Name="subject_to_learning_program_ibfk_1" Association="Self.subject_to_learning_program_ibfk_1">
             <End Role="subject" EntitySet="subject" />
+            <End Role="subject_to_learning_program" EntitySet="subject_to_learning_program" />
+          </AssociationSet>
+          <AssociationSet Name="subject_to_learning_program_ibfk_2" Association="Self.subject_to_learning_program_ibfk_2">
+            <End Role="learning_program" EntitySet="learning_program" />
+            <End Role="subject_to_learning_program" EntitySet="subject_to_learning_program" />
           </AssociationSet>
           <AssociationSet Name="subject_to_teacher_ibfk_1" Association="Self.subject_to_teacher_ibfk_1">
             <End Role="subject" EntitySet="subject" />
@@ -257,10 +281,6 @@
             <End Role="learning_program" EntitySet="learning_program" />
             <End Role="student_group" EntitySet="student_group" />
           </AssociationSet>
-          <AssociationSet Name="subject_ibfk_1" Association="schoolModel.subject_ibfk_1">
-            <End Role="learning_program" EntitySet="learning_program" />
-            <End Role="subject" EntitySet="subjects" />
-          </AssociationSet>
           <AssociationSet Name="lesson_mark_ibfk_1" Association="schoolModel.lesson_mark_ibfk_1">
             <End Role="student" EntitySet="students" />
             <End Role="lesson_mark" EntitySet="lesson_mark" />
@@ -281,6 +301,10 @@
             <End Role="subject" EntitySet="subjects" />
             <End Role="teacher" EntitySet="teachers" />
           </AssociationSet>
+          <AssociationSet Name="subject_to_learning_program" Association="schoolModel.subject_to_learning_program">
+            <End Role="subject" EntitySet="subjects" />
+            <End Role="learning_program" EntitySet="learning_program" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="classroom">
           <Key>
@@ -300,7 +324,7 @@
           <Property Name="name" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="year_of_creation" Type="Int32" Nullable="false" />
           <NavigationProperty Name="student_group" Relationship="schoolModel.student_group_ibfk_3" FromRole="learning_program" ToRole="student_group" />
-          <NavigationProperty Name="subjects" Relationship="schoolModel.subject_ibfk_1" FromRole="learning_program" ToRole="subject" />
+          <NavigationProperty Name="subjects1" Relationship="schoolModel.subject_to_learning_program" FromRole="learning_program" ToRole="subject" />
         </EntityType>
         <EntityType Name="lesson_mark">
           <Key>
@@ -352,10 +376,9 @@
           <Property Name="name" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="year_of_creation" Type="Int32" Nullable="false" />
           <Property Name="quantity" Type="Int32" Nullable="false" />
-          <Property Name="learning_program_id" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="learning_program" Relationship="schoolModel.subject_ibfk_1" FromRole="subject" ToRole="learning_program" />
           <NavigationProperty Name="lesson_mark" Relationship="schoolModel.lesson_mark_ibfk_2" FromRole="subject" ToRole="lesson_mark" />
           <NavigationProperty Name="teachers" Relationship="schoolModel.subject_to_teacher" FromRole="subject" ToRole="teacher" />
+          <NavigationProperty Name="learning_program1" Relationship="schoolModel.subject_to_learning_program" FromRole="subject" ToRole="learning_program" />
         </EntityType>
         <EntityType Name="teacher">
           <Key>
@@ -388,18 +411,6 @@
               <PropertyRef Name="id" />
             </Principal>
             <Dependent Role="student_group">
-              <PropertyRef Name="learning_program_id" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="subject_ibfk_1">
-          <End Type="schoolModel.learning_program" Role="learning_program" Multiplicity="1" />
-          <End Type="schoolModel.subject" Role="subject" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="learning_program">
-              <PropertyRef Name="id" />
-            </Principal>
-            <Dependent Role="subject">
               <PropertyRef Name="learning_program_id" />
             </Dependent>
           </ReferentialConstraint>
@@ -455,6 +466,10 @@
         <Association Name="subject_to_teacher">
           <End Type="schoolModel.subject" Role="subject" Multiplicity="*" />
           <End Type="schoolModel.teacher" Role="teacher" Multiplicity="*" />
+        </Association>
+        <Association Name="subject_to_learning_program">
+          <End Type="schoolModel.subject" Role="subject" Multiplicity="*" />
+          <End Type="schoolModel.learning_program" Role="learning_program" Multiplicity="*" />
         </Association>
         </Schema>
     </edmx:ConceptualModels>
@@ -518,7 +533,6 @@
           <EntitySetMapping Name="subjects">
             <EntityTypeMapping TypeName="schoolModel.subject">
               <MappingFragment StoreEntitySet="subject">
-                <ScalarProperty Name="learning_program_id" ColumnName="learning_program_id" />
                 <ScalarProperty Name="quantity" ColumnName="quantity" />
                 <ScalarProperty Name="year_of_creation" ColumnName="year_of_creation" />
                 <ScalarProperty Name="name" ColumnName="name" />
@@ -539,6 +553,14 @@
           <AssociationSetMapping Name="subject_to_teacher" TypeName="schoolModel.subject_to_teacher" StoreEntitySet="subject_to_teacher">
             <EndProperty Name="teacher">
               <ScalarProperty Name="id" ColumnName="teacher_id" />
+            </EndProperty>
+            <EndProperty Name="subject">
+              <ScalarProperty Name="id" ColumnName="subject_id" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="subject_to_learning_program" TypeName="schoolModel.subject_to_learning_program" StoreEntitySet="subject_to_learning_program">
+            <EndProperty Name="learning_program">
+              <ScalarProperty Name="id" ColumnName="learning_program_id" />
             </EndProperty>
             <EndProperty Name="subject">
               <ScalarProperty Name="id" ColumnName="subject_id" />

@@ -34,7 +34,6 @@ namespace SchoolControlPanel
             {
                 subject c = new subject
                 {
-                    learning_program_id = -1,
                     name = textbox_lesson_name.Text,
                     quantity = int.Parse(textbox_lesson_quantity.Text),
                     year_of_creation = int.Parse(textbox_year_of_creation.Text)

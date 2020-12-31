@@ -15,6 +15,7 @@ namespace SchoolControlPanel
     {
         private ValidatorText validator1;
         private ValidatorNumber validator2;
+        private ValidatorCheckedListBox validator3;
 
         public PanelAddLearningProgram()
         {
@@ -23,9 +24,11 @@ namespace SchoolControlPanel
             AutoValidate = AutoValidate.EnableAllowFocusChange;
             validator1 = new ValidatorText(textbox_lesson_name, errorProvider);
             validator2 = new ValidatorNumber(textbox_year_of_creation, errorProvider);
+            validator3 = new ValidatorCheckedListBox(checkedlistbox_subjects, errorProvider);
 
             this.textbox_lesson_name.Validating += new System.ComponentModel.CancelEventHandler(this.validator1.Validating);
             this.textbox_year_of_creation.Validating += new System.ComponentModel.CancelEventHandler(this.validator2.Validating);
+            this.checkedlistbox_subjects.Validating += new System.ComponentModel.CancelEventHandler(this.validator3.Validating);
         }
 
         private void button_confirm_Click(object sender, EventArgs e)
@@ -49,7 +52,8 @@ namespace SchoolControlPanel
                         subject s = db.subjects.Find(key);
                         if (s != null)
                         {
-                            s.learning_program = program;
+                            s.learning_program1.Add(program);
+                            program.subjects1.Add(s);
                         }
                     }
                     

@@ -29,13 +29,5 @@ namespace SchoolControlPanel
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<lesson_mark> lesson_mark { get; set; }
         public virtual student_group student_group { get; set; }
-        public override string ToString()
-        {
-            if (student_group_id == -1)
-            {
-                return String.Format("{0} {1} {2}", first_name, last_name, third_name);
-            } 
-            return String.Format("{0} {1} {2} (In {3})", first_name, last_name, third_name, student_group.name);
-        }
     }
 }

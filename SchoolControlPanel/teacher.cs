@@ -30,47 +30,5 @@ namespace SchoolControlPanel
         public virtual ICollection<student_group> student_group { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<subject> subjects { get; set; }
-        public override string ToString()
-        {
-            string str = String.Format("{0} {1} {2}", first_name, last_name, third_name);
-
-            if (student_group.Count > 0)
-            {
-                str += " (Classrom teacher for";
-            }
-
-            foreach (student_group s in student_group)
-            {
-                if (s.id != -1)
-                {
-                    str += " " + s.name;
-                }
-            }
-
-            if (student_group.Count > 0)
-            {
-                str += ") ";
-            }
-
-            if (subjects.Count > 0)
-            {
-                str += " (Teaches: ";
-            }
-
-            foreach (subject s in subjects)
-            {
-                if (s.id != -1)
-                {
-                    str += " " + s.name;
-                }
-            }
-
-            if (subjects.Count > 0)
-            {
-                str += ")";
-            }
-
-            return str;
-        }
     }
 }

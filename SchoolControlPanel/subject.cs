@@ -19,23 +19,19 @@ namespace SchoolControlPanel
         {
             this.lesson_mark = new HashSet<lesson_mark>();
             this.teachers = new HashSet<teacher>();
+            this.learning_program1 = new HashSet<learning_program>();
         }
     
         public int id { get; set; }
         public string name { get; set; }
         public int year_of_creation { get; set; }
         public int quantity { get; set; }
-        public int learning_program_id { get; set; }
-
-        public override string ToString()
-        {
-            return String.Format("{0} (Year: {1}, Quantity:{2})", name, year_of_creation, quantity);
-        }
-
-        public virtual learning_program learning_program { get; set; }
+    
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<lesson_mark> lesson_mark { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<teacher> teachers { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<learning_program> learning_program1 { get; set; }
     }
 }
