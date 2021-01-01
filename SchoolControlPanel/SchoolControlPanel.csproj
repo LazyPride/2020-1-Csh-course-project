@@ -115,6 +115,12 @@
     <Compile Include="MyStudent.cs" />
     <Compile Include="MyStudentGroup.cs" />
     <Compile Include="MyTeacher.cs" />
+    <Compile Include="PanelDeleteMark.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PanelDeleteMark.Designer.cs">
+      <DependentUpon>PanelDeleteMark.cs</DependentUpon>
+    </Compile>
     <Compile Include="PanelChangMark.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -190,6 +196,9 @@
     <Compile Include="ValidatorText.cs" />
     <EmbeddedResource Include="MainFrame.resx">
       <DependentUpon>MainFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PanelDeleteMark.resx">
+      <DependentUpon>PanelDeleteMark.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PanelChangMark.resx">
       <DependentUpon>PanelChangMark.cs</DependentUpon>

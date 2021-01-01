@@ -80,5 +80,11 @@ namespace SchoolControlPanel
             PanelChangeMark panel = new PanelChangeMark();
             panel.Show(this);
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            PanelDeleteMark pa = new PanelDeleteMark();
+            pa.Show(this);
+        }
     }
 }
