@@ -75,6 +75,16 @@ namespace SchoolControlPanel
                     }
                     db.SaveChanges();
                     MessageBox.Show(string.Format("Student group {0} (Year: {1}) is added!", t.name, t.entry_year), "Success!");
+
+                    this.textbox_group_name.Clear();
+                    this.textbox_year_of_creation.Clear();
+
+                    this.listbox_classroom.ClearSelected();
+                    this.listbox_classroom_teacher.ClearSelected();
+                    this.listbox_learning_program.ClearSelected();
+
+                    this.checkedLilistbox_students.ClearSelected();
+
                 }
             }
         }

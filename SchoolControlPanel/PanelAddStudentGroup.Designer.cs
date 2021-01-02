@@ -106,6 +106,7 @@
             // listbox_classroom_teacher
             // 
             this.listbox_classroom_teacher.FormattingEnabled = true;
+            this.listbox_classroom_teacher.HorizontalScrollbar = true;
             this.listbox_classroom_teacher.ItemHeight = 23;
             this.listbox_classroom_teacher.Location = new System.Drawing.Point(32, 173);
             this.listbox_classroom_teacher.Name = "listbox_classroom_teacher";
@@ -133,6 +134,7 @@
             // listbox_classroom
             // 
             this.listbox_classroom.FormattingEnabled = true;
+            this.listbox_classroom.HorizontalScrollbar = true;
             this.listbox_classroom.ItemHeight = 23;
             this.listbox_classroom.Location = new System.Drawing.Point(32, 328);
             this.listbox_classroom.Name = "listbox_classroom";
@@ -169,6 +171,7 @@
             // listbox_learning_program
             // 
             this.listbox_learning_program.FormattingEnabled = true;
+            this.listbox_learning_program.HorizontalScrollbar = true;
             this.listbox_learning_program.ItemHeight = 23;
             this.listbox_learning_program.Location = new System.Drawing.Point(32, 499);
             this.listbox_learning_program.Name = "listbox_learning_program";

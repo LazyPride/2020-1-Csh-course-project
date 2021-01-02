@@ -50,6 +50,8 @@ namespace SchoolControlPanel
 
                     MessageBox.Show(string.Format("Mark is changed!"), "Success!");
                 }
+                this.text_mark.Clear();
+                this.listbox_student.ClearSelected();
             }
         }
 

@@ -52,6 +52,10 @@ namespace SchoolControlPanel
                     db.SaveChanges();
                     MessageBox.Show(string.Format("Teacher {0} {1} {2} is added!", t.first_name, t.last_name, t.third_name), "Success!");
                 }
+                text_box_teacher_first_name.Clear();
+                text_box_teacher_last_name.Clear();
+                text_box_teacher_third_name.Clear();
+                checkedlistbox_subjects.ClearSelected();
             }
         }
 

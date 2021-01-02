@@ -65,6 +65,7 @@
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
+            this.listBox1.HorizontalScrollbar = true;
             this.listBox1.ItemHeight = 23;
             this.listBox1.Location = new System.Drawing.Point(16, 36);
             this.listBox1.Name = "listBox1";
@@ -84,11 +85,13 @@
             // listBox2
             // 
             this.listBox2.FormattingEnabled = true;
+            this.listBox2.HorizontalScrollbar = true;
             this.listBox2.ItemHeight = 23;
             this.listBox2.Location = new System.Drawing.Point(16, 174);
             this.listBox2.Name = "listBox2";
             this.listBox2.Size = new System.Drawing.Size(578, 188);
             this.listBox2.TabIndex = 14;
+            this.listBox2.SelectedIndexChanged += new System.EventHandler(this.listBox2_SelectedIndexChanged);
             // 
             // PanelDiary
             // 

@@ -59,6 +59,9 @@ namespace SchoolControlPanel
                     
                     db.SaveChanges();
                     MessageBox.Show(string.Format("Learning program is added!"), "Success!");
+                    textbox_lesson_name.Clear();
+                    textbox_year_of_creation.Clear();
+                    checkedlistbox_subjects.ClearSelected();
                 }
             }
         }

@@ -44,6 +44,9 @@ namespace SchoolControlPanel
                     db.students.Add(t);
                     db.SaveChanges();
                     MessageBox.Show(string.Format("Student {0} {1} {2} is added!", t.first_name, t.last_name, t.third_name), "Success!");
+                    text_box_student_first_name.Clear();
+                    text_box_student_last_name.Clear();
+                    text_box_student_third_name.Clear();
                 }
             }
         }

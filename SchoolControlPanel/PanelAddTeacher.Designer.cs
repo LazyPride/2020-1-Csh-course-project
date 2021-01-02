@@ -139,6 +139,7 @@
             // 
             this.checkedlistbox_subjects.CheckOnClick = true;
             this.checkedlistbox_subjects.FormattingEnabled = true;
+            this.checkedlistbox_subjects.HorizontalScrollbar = true;
             this.checkedlistbox_subjects.Location = new System.Drawing.Point(22, 190);
             this.checkedlistbox_subjects.Name = "checkedlistbox_subjects";
             this.checkedlistbox_subjects.Size = new System.Drawing.Size(466, 134);

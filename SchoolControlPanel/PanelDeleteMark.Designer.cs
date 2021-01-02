@@ -75,6 +75,7 @@
             // listbox_student
             // 
             this.listbox_student.FormattingEnabled = true;
+            this.listbox_student.HorizontalScrollbar = true;
             this.listbox_student.ItemHeight = 23;
             this.listbox_student.Location = new System.Drawing.Point(23, 50);
             this.listbox_student.Name = "listbox_student";

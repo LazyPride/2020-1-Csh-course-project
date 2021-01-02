@@ -55,6 +55,10 @@ namespace SchoolControlPanel
                    
                     db.SaveChanges();
                     MessageBox.Show(string.Format("Mark is added!"), "Success!");
+                    this.text_mark.Clear();
+                    this.text_lesson_number.Clear();
+                    this.listbox_subject.ClearSelected();
+                    this.listbox_student.ClearSelected();
                 }
             }
         }

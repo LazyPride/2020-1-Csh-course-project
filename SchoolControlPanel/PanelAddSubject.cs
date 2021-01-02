@@ -45,6 +45,9 @@ namespace SchoolControlPanel
                     db.SaveChanges();
                     MessageBox.Show(string.Format("Subject {0} (Y:{2}, Q:{1}) is added!", c.name, c.quantity, c.year_of_creation), "Success!");
                 }
+                this.textbox_lesson_name.Clear();
+                this.textbox_year_of_creation.Clear();
+                this.textbox_lesson_quantity.Clear();
             }
         }
 

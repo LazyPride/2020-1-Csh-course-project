@@ -53,5 +53,10 @@ namespace SchoolControlPanel
                     );
             }
         }
+
+        private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

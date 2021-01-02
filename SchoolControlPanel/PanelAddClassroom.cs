@@ -35,6 +35,9 @@ namespace SchoolControlPanel
                     db.classrooms.Add(c);
                     db.SaveChanges();
                     MessageBox.Show(string.Format("Classroom {0}-{1} on {2} floor is added!", c.primary_num, c.secondary_num, c.floor), "Success!");
+                    textBox1.Clear();
+                    textBox2.Clear();
+                    textBox3.Clear();
                 }
             }
         }
