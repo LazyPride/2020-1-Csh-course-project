@@ -120,7 +120,7 @@
             this.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "PanelChangeMark";
-            this.Text = "Add Student";
+            this.Text = "Change Mark";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PanelAddStudent_FormClosing);
             this.Load += new System.EventHandler(this.PanelAddMark_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
