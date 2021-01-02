@@ -90,7 +90,7 @@
             this.button_add_teacher.Margin = new System.Windows.Forms.Padding(5);
             this.button_add_teacher.Name = "button_add_teacher";
             this.button_add_teacher.Size = new System.Drawing.Size(232, 41);
-            this.button_add_teacher.TabIndex = 8;
+            this.button_add_teacher.TabIndex = 4;
             this.button_add_teacher.Text = "Add teacher";
             this.button_add_teacher.UseVisualStyleBackColor = true;
             this.button_add_teacher.Click += new System.EventHandler(this.button_add_teacher_Click);
@@ -102,7 +102,7 @@
             this.button_add_subject.Margin = new System.Windows.Forms.Padding(5);
             this.button_add_subject.Name = "button_add_subject";
             this.button_add_subject.Size = new System.Drawing.Size(232, 41);
-            this.button_add_subject.TabIndex = 7;
+            this.button_add_subject.TabIndex = 5;
             this.button_add_subject.Text = "Add subject";
             this.button_add_subject.UseVisualStyleBackColor = true;
             this.button_add_subject.Click += new System.EventHandler(this.button_add_subject_Click);
@@ -114,7 +114,7 @@
             this.button_add_student_group.Margin = new System.Windows.Forms.Padding(5);
             this.button_add_student_group.Name = "button_add_student_group";
             this.button_add_student_group.Size = new System.Drawing.Size(232, 41);
-            this.button_add_student_group.TabIndex = 6;
+            this.button_add_student_group.TabIndex = 3;
             this.button_add_student_group.Text = "Add student group";
             this.button_add_student_group.UseVisualStyleBackColor = true;
             this.button_add_student_group.Click += new System.EventHandler(this.button_add_student_group_Click);
@@ -126,7 +126,7 @@
             this.button_add_student.Margin = new System.Windows.Forms.Padding(5);
             this.button_add_student.Name = "button_add_student";
             this.button_add_student.Size = new System.Drawing.Size(232, 41);
-            this.button_add_student.TabIndex = 5;
+            this.button_add_student.TabIndex = 2;
             this.button_add_student.Text = "Add student";
             this.button_add_student.UseVisualStyleBackColor = true;
             this.button_add_student.Click += new System.EventHandler(this.button_add_student_Click);
@@ -138,7 +138,7 @@
             this.button_add_mark.Margin = new System.Windows.Forms.Padding(5);
             this.button_add_mark.Name = "button_add_mark";
             this.button_add_mark.Size = new System.Drawing.Size(232, 41);
-            this.button_add_mark.TabIndex = 4;
+            this.button_add_mark.TabIndex = 1;
             this.button_add_mark.Text = "Add mark";
             this.button_add_mark.UseVisualStyleBackColor = true;
             this.button_add_mark.Click += new System.EventHandler(this.button_add_mark_Click);
@@ -150,7 +150,7 @@
             this.button_add_learning_program.Margin = new System.Windows.Forms.Padding(5);
             this.button_add_learning_program.Name = "button_add_learning_program";
             this.button_add_learning_program.Size = new System.Drawing.Size(232, 41);
-            this.button_add_learning_program.TabIndex = 3;
+            this.button_add_learning_program.TabIndex = 6;
             this.button_add_learning_program.Text = "Add learning program";
             this.button_add_learning_program.UseVisualStyleBackColor = true;
             this.button_add_learning_program.Click += new System.EventHandler(this.button_add_learning_program_Click);
@@ -173,7 +173,7 @@
             this.button_add_classroom.Margin = new System.Windows.Forms.Padding(5);
             this.button_add_classroom.Name = "button_add_classroom";
             this.button_add_classroom.Size = new System.Drawing.Size(232, 41);
-            this.button_add_classroom.TabIndex = 0;
+            this.button_add_classroom.TabIndex = 7;
             this.button_add_classroom.Text = "Add classroom";
             this.button_add_classroom.UseVisualStyleBackColor = true;
             this.button_add_classroom.Click += new System.EventHandler(this.button_add_classroom_Click);
@@ -183,7 +183,7 @@
             this.button2.Location = new System.Drawing.Point(20, 552);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(295, 42);
-            this.button2.TabIndex = 2;
+            this.button2.TabIndex = 8;
             this.button2.Text = "Diary";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -193,7 +193,7 @@
             this.button3.Location = new System.Drawing.Point(20, 600);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(295, 42);
-            this.button3.TabIndex = 3;
+            this.button3.TabIndex = 9;
             this.button3.Text = "Change mark";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
@@ -203,7 +203,7 @@
             this.button4.Location = new System.Drawing.Point(20, 648);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(295, 42);
-            this.button4.TabIndex = 4;
+            this.button4.TabIndex = 10;
             this.button4.Text = "Delete mark";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
