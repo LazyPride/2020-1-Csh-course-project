@@ -8,5 +8,9 @@ namespace SchoolControlPanel
 {
     partial class student_group
     {
+        public override string ToString()
+        {
+            return String.Format("{0}", name);
+        }
     }
 }
