@@ -12,3 +12,9 @@
  - [Closing the C# windows form by avoiding textbox validation](https://stackoverflow.com/questions/15920770/closing-the-c-sharp-windows-form-by-avoiding-textbox-validation)
  - [How to skip Validating after clicking on a Form's Cancel button](https://stackoverflow.com/questions/1882523/how-to-skip-validating-after-clicking-on-a-forms-cancel-button)
  - [ErrorProvider disables all other buttons/events on windows form](https://social.msdn.microsoft.com/Forums/windows/en-US/4e21bd3c-8a34-4ed3-94ab-d29d6fbd72d0/errorprovider-disables-all-other-buttonsevents-on-windows-form?forum=winforms)
+
+## Read things
+ 
+ - [identifying vs non identifying relationship](https://vertabelo.com/blog/defining-identifying-and-non-identifying-relationships-in-vertabelo/#:~:text=Identifying%20relationships%20exist%20when%20the,the%20child%20entity's%20primary%20key.)
+ - [ERD notes](https://www.lucidchart.com/pages/ru/erd-%D0%B4%D0%B8%D0%B0%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B0)
+ - [Create ER Diagram of a Database in MySQL Workbench](https://medium.com/@tushar0618/how-to-create-er-diagram-of-a-database-in-mysql-workbench-209fbf63fd03)
